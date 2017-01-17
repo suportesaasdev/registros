@@ -75,26 +75,14 @@ Class User{
         			session_start();
         			$_SESSION['nome'] = $ler['nome'];
         			$_SESSION['email'] = $email_;
-        			echo 'foi';
-        			echo $ler['nome'];
-        			echo $ler['senha'];
-        			echo $ler['salt'];
-        			echo $ler['email'];
         		}else{
         			echo $ler['senha'];
         			echo '<hr />';
         			echo $senha;
         		}
-
         	}
-        	
-         	
         }
-
-
-		
 	}
-
 }
 
 
@@ -103,9 +91,8 @@ $usuario = new User();
 $usuario -> setName('nicolas');
 $usuario -> setEmail('nicolasgleiser.com.br');
 $usuario -> setSalt('esse é um salt Bem bacanudo !@#$%¨&*');
-$usuario -> setPassword('Nicol@s123');
+$usuario -> setPassword('SenhaManeira@123456');
 $email = $usuario -> getEmail();
 $senha = $usuario -> getPassword();
 
 $usuario -> login($email, $senha);
-
